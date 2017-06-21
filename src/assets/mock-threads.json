@@ -1,0 +1,20 @@
+{
+  "threads": [
+    {
+      "id": "1",
+      "title": "Thread 1"
+    },
+    {
+      "id": "2",
+      "title": "Thread 2"
+    },
+    {
+      "id": "3",
+      "title": "Thread 3"
+    },
+    {
+      "id": "4",
+      "title": "Thread 4"
+    }
+  ]
+}

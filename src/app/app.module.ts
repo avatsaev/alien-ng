@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {SharedModule} from './modules/shared/shared.module';
+import {HttpModule} from '@angular/http';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {SharedModule} from './modules/shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     SharedModule

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import {ToolbarComponent} from '../../components/toolbar/toolbar.component';
 import {SharedService} from '../../services/shared.service';
 import {CustomMaterialModule} from '../custom-material/custom-material.module';
+import {MockService} from '../../services/mock.service';
+import {StoreModule} from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -10,14 +12,17 @@ import {CustomMaterialModule} from '../custom-material/custom-material.module';
   ],
   imports: [
     CommonModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    StoreModule.provideStore({}, {})
   ],
   providers: [
-    SharedService
+    SharedService,
+    MockService
   ],
   exports: [
     ToolbarComponent,
-    CustomMaterialModule
+    CustomMaterialModule,
+    StoreModule
   ]
 })
 export class SharedModule { }
