@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {Thread} from "../../models/thread";
+import {Thread} from '../../models/thread';
 
 @Component({
   selector: 'app-thread-list',

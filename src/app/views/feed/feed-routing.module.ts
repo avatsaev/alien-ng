@@ -3,7 +3,7 @@
 
 import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {FeedComponent} from "./feed.component";
+import {FeedComponent} from './feed.component';
 
 
 const routes: Routes = [

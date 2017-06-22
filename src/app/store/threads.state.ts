@@ -1,4 +1,4 @@
-import {Thread} from "../models/thread";
+import {Thread} from '../models/thread';
 
 export interface ThreadsState {
   allThreads: Thread[];

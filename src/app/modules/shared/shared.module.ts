@@ -4,7 +4,7 @@ import {ToolbarComponent} from '../../components/toolbar/toolbar.component';
 import {SharedService} from '../../services/shared.service';
 import {CustomMaterialModule} from '../custom-material/custom-material.module';
 import {MockService} from '../../services/mock.service';
-import {ThreadListComponent} from "../../components/thread-list/thread-list.component";
+import {ThreadListComponent} from '../../components/thread-list/thread-list.component';
 
 @NgModule({
   declarations: [

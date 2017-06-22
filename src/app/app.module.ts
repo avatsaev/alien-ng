@@ -10,7 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from './modules/shared/shared.module';
 import { HttpModule } from '@angular/http';
 
-import {StoreModule} from "@ngrx/store";
+import {StoreModule} from '@ngrx/store';
 
 
 import {APPLICATION_REDUCERS} from './store/application.reducers'

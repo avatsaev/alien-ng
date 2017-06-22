@@ -1,14 +1,14 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {MockService} from "../../services/mock.service";
-import {Store} from "@ngrx/store";
+import {MockService} from '../../services/mock.service';
+import {Store} from '@ngrx/store';
 
-import {Observable} from "rxjs/Observable";
-import {Thread} from "../../models/thread";
+import {Observable} from 'rxjs/Observable';
+import {Thread} from '../../models/thread';
 
 
 import * as ThreadActions from '../../store/thread.actions';
 
-import {ApplicationState} from "../../store/application.state";
+import {ApplicationState} from '../../store/application.state';
 
 
 @Component({

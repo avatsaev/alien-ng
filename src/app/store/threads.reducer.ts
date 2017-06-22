@@ -1,9 +1,9 @@
 import * as ThreadsActions from './thread.actions';
-import {ThreadsState} from "./threads.state";
+import {ThreadsState} from './threads.state';
 import {INITIAL_THREADS_STATE} from './threads.state'
 
 
-export function threadsReducer(state:ThreadsState = INITIAL_THREADS_STATE, action: ThreadsActions.All) : ThreadsState {
+export function threadsReducer(state: ThreadsState = INITIAL_THREADS_STATE, action: ThreadsActions.All): ThreadsState {
 
   switch (action.type) {
 
