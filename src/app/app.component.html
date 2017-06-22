@@ -1,21 +1,10 @@
 
 
+<app-toolbar></app-toolbar>
 
-<script src="app.component.spec.ts"></script>
-<md-sidenav-container fullscreen>
-  <md-sidenav #start>
-    <md-nav-list>
+<div class="main-content">
 
-    </md-nav-list>
+  <router-outlet></router-outlet>
 
-  </md-sidenav>
-  <div>
-    <app-toolbar (onSideNavClicked)="start.toggle()"></app-toolbar>
-    <div>
+</div>
 
-        <router-outlet></router-outlet>
-
-    </div>
-
-  </div>
-</md-sidenav-container>

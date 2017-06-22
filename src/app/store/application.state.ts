@@ -1,8 +1,6 @@
-import {UiState} from './ui.state';
-import {StoreData} from './store.data';
-
+import {ThreadsState} from './threads.state';
 
 export interface ApplicationState {
-  uiState: UiState;
-  storeData: StoreData;
+  threads: ThreadsState
 }
+

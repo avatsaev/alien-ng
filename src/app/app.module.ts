@@ -4,11 +4,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {SharedModule} from './modules/shared/shared.module';
-import {HttpModule} from '@angular/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from './modules/shared/shared.module';
+import { HttpModule } from '@angular/http';
+
+import {StoreModule} from "@ngrx/store";
+
+
+import {APPLICATION_REDUCERS} from './store/application.reducers'
+
+
 
 
 @NgModule({
@@ -21,7 +28,8 @@ import {HttpModule} from '@angular/http';
     HttpModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    SharedModule
+    SharedModule,
+    StoreModule.provideStore(APPLICATION_REDUCERS)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,19 +2,38 @@
   "threads": [
     {
       "id": "1",
-      "title": "Thread 1"
+      "title": "Thread 1",
+      "author": "John Doe",
+      "commentsCount": 12,
+      "url": "https://google.com"
     },
     {
       "id": "2",
-      "title": "Thread 2"
+      "title": "Thread 2",
+      "author": "John Doe",
+      "commentsCount": 18,
+      "url": "https://google.com"
     },
     {
       "id": "3",
-      "title": "Thread 3"
+      "title": "Thread 3",
+      "author": "John Doe",
+      "commentsCount": 32,
+      "url": "https://google.com"
     },
     {
       "id": "4",
-      "title": "Thread 4"
+      "title": "Thread 4",
+      "author": "John Doe",
+      "commentsCount": 42,
+      "url": "https://google.com"
+    },
+    {
+      "id": "5",
+      "title": "Thread 5",
+      "author": "John Doe",
+      "commentsCount": 782,
+      "url": "https://google.com"
     }
   ]
 }

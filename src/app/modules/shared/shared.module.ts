@@ -4,16 +4,17 @@ import {ToolbarComponent} from '../../components/toolbar/toolbar.component';
 import {SharedService} from '../../services/shared.service';
 import {CustomMaterialModule} from '../custom-material/custom-material.module';
 import {MockService} from '../../services/mock.service';
-import {StoreModule} from '@ngrx/store';
+import {ThreadListComponent} from "../../components/thread-list/thread-list.component";
 
 @NgModule({
   declarations: [
-    ToolbarComponent
+    ToolbarComponent,
+    ThreadListComponent
   ],
   imports: [
     CommonModule,
     CustomMaterialModule,
-    StoreModule.provideStore({}, {})
+
   ],
   providers: [
     SharedService,
@@ -22,7 +23,7 @@ import {StoreModule} from '@ngrx/store';
   exports: [
     ToolbarComponent,
     CustomMaterialModule,
-    StoreModule
+    ThreadListComponent
   ]
 })
 export class SharedModule { }
