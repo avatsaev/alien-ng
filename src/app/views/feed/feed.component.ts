@@ -19,7 +19,6 @@ import {ApplicationState} from "../../store/application.state";
 })
 export class FeedComponent implements OnInit {
 
-  threadCount$: Observable<number>;
   threads$: Observable<Thread[]>;
 
   constructor(
@@ -32,11 +31,7 @@ export class FeedComponent implements OnInit {
 
     this.threads$ = this.store.select(state => state.threads.allThreads);
 
-    this.mockS.getThreads().subscribe(res => {
-
-      this.store.dispatch(new ThreadActions.LoadAll(res['threads']))
-    });
-
+    this.mockS.getThreads().subscribe(res => this.store.dispatch(new ThreadActions.LoadAll(res['threads'])) );
 
   }
 
