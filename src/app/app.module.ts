@@ -14,8 +14,8 @@ import {StoreModule} from '@ngrx/store';
 
 
 import {APPLICATION_REDUCERS} from './store/application.reducers'
-import {EffectsModule} from "@ngrx/effects";
-import {ThreadsEffects} from "./effects/threads.effects";
+import {EffectsModule} from '@ngrx/effects';
+import {ThreadsEffects} from './effects/threads.effects';
 
 
 

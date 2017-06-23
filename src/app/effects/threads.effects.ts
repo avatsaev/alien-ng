@@ -11,14 +11,16 @@ import * as ThreadsActions from '../store/thread.actions';
 
 @Injectable()
 export class ThreadsEffects {
+
+  @Effect()
+  getAll$: Observable<Action> = this.actions$.ofType(ThreadsActions.LOAD_ALL)
+      .switchMap( () => this.mockS.getThreads() )
+      .map(res => new ThreadsActions.LoadAllSuccess(res));
+
   constructor(
       private actions$: Actions,
       private mockS: MockService
   ) {}
-  
-  
-  @Effect()
-  getAll$: Observable<Action> = this.actions$.ofType(ThreadsActions.LOAD_ALL)
-      .switchMap( () => this.mockS.getThreads() )
-      .map(res => new ThreadsActions.LoadAllSuccess(res))
+
+
 }
