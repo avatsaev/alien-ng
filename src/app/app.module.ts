@@ -15,14 +15,13 @@ import {StoreModule} from '@ngrx/store';
 
 import {APPLICATION_REDUCERS} from './store/application.reducers'
 import {EffectsModule} from '@ngrx/effects';
-import {ThreadsEffects} from './effects/threads.effects';
-
-
+import {ThreadsEffects} from './store/threads.effects';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +31,8 @@ import {ThreadsEffects} from './effects/threads.effects';
     FlexLayoutModule,
     SharedModule,
     StoreModule.provideStore(APPLICATION_REDUCERS),
-      EffectsModule.run(ThreadsEffects)
+    EffectsModule.run(ThreadsEffects),
+    StoreDevtoolsModule.instrumentOnlyWithExtension()
   ],
   providers: [],
   bootstrap: [AppComponent]

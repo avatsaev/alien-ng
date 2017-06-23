@@ -5,16 +5,19 @@ import {SharedService} from '../../services/shared.service';
 import {CustomMaterialModule} from '../custom-material/custom-material.module';
 import {MockService} from '../../services/mock.service';
 import {ThreadListComponent} from '../../components/thread-list/thread-list.component';
+import {RouterModule} from '@angular/router';
+import {ThreadDetailsComponent} from "../../components/thread-details/thread-details.component";
 
 @NgModule({
   declarations: [
     ToolbarComponent,
-    ThreadListComponent
+    ThreadListComponent,
+    ThreadDetailsComponent
   ],
   imports: [
     CommonModule,
     CustomMaterialModule,
-
+    RouterModule
   ],
   providers: [
     SharedService,
@@ -23,7 +26,8 @@ import {ThreadListComponent} from '../../components/thread-list/thread-list.comp
   exports: [
     ToolbarComponent,
     CustomMaterialModule,
-    ThreadListComponent
+    ThreadListComponent,
+    ThreadDetailsComponent
   ]
 })
 export class SharedModule { }

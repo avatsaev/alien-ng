@@ -1,22 +1,4 @@
-<ul class="thread-list" *ngFor="let t of threads">
-  <li class="thread-item">
+<div class="thread-list" >
+  <app-thread-details *ngFor="let t of threads" [thread]="t"></app-thread-details>
 
-    <p>{{t.title}}</p>
-
-    <div class="thread-info">
-
-      <span> Comments: <b>{{t.commentsCount}}</b> </span>
-
-      <br>
-
-      <span> Author: <b>{{t.author}} </b></span>
-
-      <br>
-
-      <span>URL: <b><a [href]="t.url">{{t.url}}</a></b> </span>
-
-    </div>
-
-  </li>
-
-</ul>
+</div>

@@ -9,7 +9,16 @@ export class MockService {
   
   
   getThreads(): Observable<any> {
-    return this.http.get('/assets/mock-threads.json').delay(400).map(res => res.json());
+    return this.http.get('/assets/mock-threads.json')
+        .delay(400)
+        .map(res => res.json());
+  }
+
+  getThread(id: string): Observable<any> {
+    return this.http.get('/assets/mock-threads.json')
+        .delay(400)
+        .map(res => res.json()['threads'])
+        .map(threads => threads.filter(t => t.id === id)[0]);
   }
 
 }

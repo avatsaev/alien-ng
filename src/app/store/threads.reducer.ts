@@ -14,6 +14,13 @@ export function threadsReducer(state: ThreadsState = INITIAL_THREADS_STATE, acti
       }
     }
 
+    case ThreadsActions.LOAD_SUCCESS: {
+      return {
+        ...state,
+        currentThread: action.payload
+      }
+    }
+
     default: {
       return state;
     }
