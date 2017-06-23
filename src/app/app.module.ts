@@ -14,6 +14,8 @@ import {StoreModule} from '@ngrx/store';
 
 
 import {APPLICATION_REDUCERS} from './store/application.reducers'
+import {EffectsModule} from "@ngrx/effects";
+import {ThreadsEffects} from "./effects/threads.effects";
 
 
 
@@ -29,7 +31,8 @@ import {APPLICATION_REDUCERS} from './store/application.reducers'
     BrowserAnimationsModule,
     FlexLayoutModule,
     SharedModule,
-    StoreModule.provideStore(APPLICATION_REDUCERS)
+    StoreModule.provideStore(APPLICATION_REDUCERS),
+      EffectsModule.run(ThreadsEffects)
   ],
   providers: [],
   bootstrap: [AppComponent]

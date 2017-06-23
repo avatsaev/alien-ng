@@ -1,5 +1,4 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {MockService} from '../../services/mock.service';
 import {Store} from '@ngrx/store';
 
 import {Observable} from 'rxjs/Observable';
@@ -23,17 +22,15 @@ export class FeedComponent implements OnInit {
   threadsCount$: Observable<number>;
 
   constructor(
-      private mockS: MockService,
       public store: Store<ApplicationState>
   ) { }
 
   ngOnInit() {
 
-
     this.threads$ = this.store.select(selectAllThreads);
     this.threadsCount$ = this.store.select(selectAllThreadsCount);
 
-    this.mockS.getThreads().subscribe(res => this.store.dispatch(new ThreadActions.LoadAll(res['threads'])) );
+    this.store.dispatch(new ThreadActions.LoadAll());
 
   }
 
