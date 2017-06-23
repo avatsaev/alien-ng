@@ -1,0 +1,25 @@
+<div class="thread-item">
+
+  <p>
+
+    <a [routerLink]="['thread', thread.id]">
+      {{thread.title}}
+    </a>
+
+  </p>
+
+  <div class="thread-info">
+
+    <span> Comments: <b>{{thread.commentsCount}}</b> </span>
+
+    <br>
+
+    <span> Author: <b>{{thread.author}} </b></span>
+
+    <br>
+
+    <span>URL: <b><a [href]="thread.url">{{thread.url}}</a></b> </span>
+
+  </div>
+
+</div>
