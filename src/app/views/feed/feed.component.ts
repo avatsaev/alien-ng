@@ -8,7 +8,7 @@ import {Thread} from '../../models/thread';
 
 import * as ThreadActions from '../../store/thread.actions';
 
-import {ApplicationState} from '../../store/application.state';
+import {ApplicationState, selectAllThreads, selectAllThreadsCount} from '../../store/application.state';
 
 
 @Component({
@@ -20,6 +20,7 @@ import {ApplicationState} from '../../store/application.state';
 export class FeedComponent implements OnInit {
 
   threads$: Observable<Thread[]>;
+  threadsCount$: Observable<number>;
 
   constructor(
       private mockS: MockService,
@@ -29,7 +30,8 @@ export class FeedComponent implements OnInit {
   ngOnInit() {
 
 
-    this.threads$ = this.store.select(state => state.threads.allThreads);
+    this.threads$ = this.store.select(selectAllThreads);
+    this.threadsCount$ = this.store.select(selectAllThreadsCount);
 
     this.mockS.getThreads().subscribe(res => this.store.dispatch(new ThreadActions.LoadAll(res['threads'])) );
 

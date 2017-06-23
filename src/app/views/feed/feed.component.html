@@ -1,5 +1,5 @@
-<p *ngIf="threads$ | async as threads">
-  Thread count: {{ threads.length }}
+<p >
+  Thread count: {{ threadsCount$ | async }}
 </p>
 
 <app-thread-list [threads]=" threads$ | async"></app-thread-list>
